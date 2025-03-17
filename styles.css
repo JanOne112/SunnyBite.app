@@ -1,39 +1,38 @@
-/* Reset dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: url('cursor.png'), auto; /* Custom cursor */
-}
-
-/* Responsive Layout */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #F5E1C0; /* Warna krem lembut */
+    color: #3E2723; /* Warna coklat gelap untuk teks */
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: #ff9800;
+/* Header */
+header {
+    background-color: #4E342E; /* Coklat tua untuk header */
+    color: white;
+    padding: 15px 0;
 }
 
-.navbar ul {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
     list-style: none;
     display: flex;
 }
 
-.navbar ul li {
+nav ul li {
     margin: 0 15px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
+nav ul li a {
+    color: white; /* Warna teks navbar */
     font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFC107; /* Kuning emas saat hover */
 }
 
 /* Hero Section */
@@ -42,88 +41,84 @@ body {
     padding: 100px 20px;
     background: url('hero-bg.jpg') no-repeat center center/cover;
     color: white;
-    font-size: 1.5rem;
 }
 
-.hero h2 {
+.hero h1 {
+    color: #FFC107; /* Kuning emas */
     font-size: 2.5rem;
-    font-weight: bold;
+}
+
+
+.hero h1 span {
+    color: #FFD700;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    color: #D7CCC8; /* Warna krem keabu-abuan */
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 15px;
+    background-color: #FFC107; /* Warna kuning emas */
+    color: #4E342E; /* Warna coklat tua */
     padding: 10px 20px;
-    background: #ff9800;
-    color: white;
-    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #e68900;
+    background-color: #FF8F00; /* Warna oranye gelap saat hover */
 }
 
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-    .hero {
-        height: 60vh;
-    }
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
 }
 
-/* Custom Cursor */
-.custom-cursor {
-    width: 20px;
-    height: 20px;
-    background-color: rgba(255, 165, 0, 0.8);
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: transform 0.1s ease-out;
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-/* Efek klik */
-.custom-cursor.click {
-    transform: translate(-50%, -50%) scale(1.5);
-    background-color: rgba(255, 69, 0, 0.8);
+/* Image Gallery */
+.image-gallery {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Menu Section */
+.image-gallery img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #3E2723; /* Coklat gelap */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+/* MENU */
 .menu {
     text-align: center;
     padding: 50px 20px;
-    background-color: #fff3e0;
 }
 
 .menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    max-width: 900px;
-    margin: auto;
 }
 
 .menu-item {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
 }
 
 .menu-item img {
@@ -131,112 +126,49 @@ body {
     border-radius: 10px;
 }
 
-.menu-item h3 {
+.menu-item h2 {
     margin: 10px 0;
 }
 
-/* Reservation Section */
-.reservation {
+/* RESERVATION & CONTACT */
+.reservation, .contact {
     text-align: center;
     padding: 50px 20px;
-    background-color: #ffe0b2;
 }
 
-.reservation form {
+form {
     max-width: 400px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.reservation label {
-    text-align: left;
-    margin-top: 10px;
+label {
     font-weight: bold;
 }
 
-.reservation input {
+input, textarea {
     padding: 10px;
-    margin-top: 5px;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.reservation button {
-    margin-top: 20px;
+textarea {
+    height: 100px;
+}
+
+button {
     padding: 10px;
-    background: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.reservation button:hover {
-    background: #e68900;
-}
-
-/* Pesan konfirmasi */
-.hidden {
-    display: none;
-    margin-top: 20px;
-    font-weight: bold;
-    color: green;
-}
-
-/* Contact Section */
-.contact {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff3e0;
-}
-
-.contact-info {
-    margin-bottom: 30px;
+    background-color: #FFD700;
+    color: black;
     font-size: 18px;
-}
-
-.contact form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact label {
-    text-align: left;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.contact input,
-.contact textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    margin-top: 20px;
-    padding: 10px;
-    background: #ff9800;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
 }
 
-.contact button:hover {
-    background: #e68900;
-}
-
-/* Pesan konfirmasi */
-.hidden {
-    display: none;
-    margin-top: 20px;
-    font-weight: bold;
-    color: green;
+button:hover {
+    background-color: #FFC107;
 }

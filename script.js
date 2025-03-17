@@ -1,40 +1,37 @@
-// Membuat elemen cursor custom
-const cursor = document.createElement("div");
-cursor.classList.add("custom-cursor");
-document.body.appendChild(cursor);
-
-// Menggerakkan cursor mengikuti mouse
-document.addEventListener("mousemove", (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
-});
-
-// Efek klik pada cursor
-document.addEventListener("mousedown", () => {
-    cursor.classList.add("click");
-});
-document.addEventListener("mouseup", () => {
-    cursor.classList.remove("click");
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("reservationForm");
+    // Animasi hero section
+    const heroText = document.querySelector(".hero-content");
+    if (heroText) {
+        heroText.style.opacity = "0";
+        heroText.style.transform = "translateY(50px)";
+
+        setTimeout(() => {
+            heroText.style.opacity = "1";
+            heroText.style.transform = "translateY(0)";
+            heroText.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+        }, 500);
+    }
+
+    // Validasi Form Reservasi
+    const reservationForm = document.getElementById("reservationForm");
     const confirmationMessage = document.getElementById("confirmationMessage");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        confirmationMessage.classList.remove("hidden");
-        form.reset();
-    });
-});
+    if (reservationForm) {
+        reservationForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const guests = document.getElementById("guests").value;
 
-document.addEventListener("DOMContentLoaded", () => {
-    const contactForm = document.getElementById("contactForm");
-    const messageConfirmation = document.getElementById("messageConfirmation");
-
-    contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        messageConfirmation.classList.remove("hidden");
-        contactForm.reset();
-    });
+            if (name && email && date && time && guests) {
+                confirmationMessage.classList.remove("hidden");
+                confirmationMessage.textContent = `Reservasi atas nama ${name} pada ${date} pukul ${time} untuk ${guests} orang telah dikonfirmasi!`;
+                reservationForm.reset();
+            } else {
+                alert("Harap isi semua kolom formulir dengan benar.");
+            }
+        });
+    }
 });

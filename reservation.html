@@ -3,46 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservasi - SunnyBite Café</title>
+    <title>SunnyBite Café - Reservasi</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <div class="logo">SunnyBite Café</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservasi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>SunnyBite Café</h1>
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="reservation.html">Reservasi</a></li>
-            <li><a href="contact.html">Kontak</a></li>
-        </ul>
-    </nav>
-
-    <!-- Reservation Section -->
     <section class="reservation">
-        <h2>Reservasi Meja</h2>
-        <form id="reservationForm">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
+        <h1>Reservasi Meja</h1>
+        <form>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="date">Tanggal:</label>
-            <input type="date" id="date" name="date" required>
+            <label for="tanggal">Tanggal:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
 
-            <label for="time">Waktu:</label>
-            <input type="time" id="time" name="time" required>
+            <label for="jumlah">Jumlah Orang:</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" required>
 
-            <label for="guests">Jumlah Tamu:</label>
-            <input type="number" id="guests" name="guests" min="1" required>
-
-            <button type="submit">Pesan Sekarang</button>
+            <button type="submit" class="btn">Pesan Sekarang</button>
         </form>
-        <p id="confirmationMessage" class="hidden">Reservasi Anda telah dikonfirmasi!</p>
     </section>
 
+    <footer>
+        <p>&copy; 2025 SunnyBite Café. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

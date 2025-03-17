@@ -3,49 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak - SunnyBite Café</title>
+    <title>SunnyBite Café - Kontak</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <div class="logo">SunnyBite Café</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservasi</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>SunnyBite Café</h1>
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="reservation.html">Reservasi</a></li>
-            <li><a href="contact.html">Kontak</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contact Section -->
     <section class="contact">
-        <h2>Hubungi Kami</h2>
-
-        <div class="contact-info">
-            <p><strong>Alamat:</strong> Jl. Kopi No. 123, Jakarta</p>
-            <p><strong>Email:</strong> info@sunnybitecafe.com</p>
-            <p><strong>Telepon:</strong> +62 812-3456-7890</p>
-        </div>
-
-        <h3>Kirim Pesan</h3>
-        <form id="contactForm">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
+        <h1>Hubungi Kami</h1>
+        <form>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" required></textarea>
 
-            <button type="submit">Kirim</button>
+            <button type="submit" class="btn">Kirim</button>
         </form>
-
-        <p id="messageConfirmation" class="hidden">Pesan Anda telah dikirim!</p>
     </section>
 
+    <footer>
+        <p>&copy; 2025 SunnyBite Café. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
