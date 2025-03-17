@@ -38,14 +38,38 @@ body {
 
 /* Hero Section */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    background: url('hero-bg.jpg') center/cover no-repeat;
     text-align: center;
+    padding: 100px 20px;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     color: white;
+    font-size: 1.5rem;
 }
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
 
 /* Responsiveness */
 @media (max-width: 768px) {
