@@ -110,3 +110,109 @@ body {
 .menu-item h3 {
     margin: 10px 0;
 }
+
+/* Reservation Section */
+.reservation {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe0b2;
+}
+
+.reservation form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation label {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.reservation input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reservation button:hover {
+    background: #e68900;
+}
+
+/* Pesan konfirmasi */
+.hidden {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff3e0;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact button:hover {
+    background: #e68900;
+}
+
+/* Pesan konfirmasi */
+.hidden {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}

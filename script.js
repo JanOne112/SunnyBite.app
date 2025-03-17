@@ -16,3 +16,25 @@ document.addEventListener("mousedown", () => {
 document.addEventListener("mouseup", () => {
     cursor.classList.remove("click");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("reservationForm");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        confirmationMessage.classList.remove("hidden");
+        form.reset();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contactForm");
+    const messageConfirmation = document.getElementById("messageConfirmation");
+
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        messageConfirmation.classList.remove("hidden");
+        contactForm.reset();
+    });
+});
